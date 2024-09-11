@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.quiz-container {
+    display: none;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.quiz-container.active {
+    display: block;
+}
+
+.quiz-container.fade-out {
+    opacity: 0;
+}
+
+.message {
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+.image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+}
+
+#question {
+    margin-bottom: 20px;
+}
+
+.hint-button {
+    margin: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+}
+
+.hint-button:hover {
+    background-color: #0056b3;
+}
+
+.retry-container {
+    display: none;
+    margin: 20px 0;
+}
+
+.retry-container.active {
+    display: block;
+}
+
+.retry-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.retry-list li {
+    margin: 5px 0;
+}
+
+.retry-box {
+    display: block;
+    margin: 5px 0;
+}
+
+.retry-box input {
+    width: 200px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: none;
+    margin: 20px;
+}
+
+.button-container.active {
+    display: block;
+}
+
+.button-container button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+
+.button-container button:active {
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .image {
+        max-width: 100%;
+    }
+}
+
+.streak-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.streak-icon {
+    margin-right: 10px;
+}
+
+.streak-count {
+    font-weight: bold;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Química</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jav.js" defer></script>
+</head>
+<body>
+    <h1>Quiz de Química</h1>
+    <div id="streak-container" class="streak-container">
+        <span id="streak-icon" class="streak-icon">🔥</span>
+        <span id="streak-count" class="streak-count">0</span>
+    </div>
+    <div id="quiz-container" class="quiz-container active">
+        <div id="question-container">
+            <p id="question">What's the name of this object?</p>
+            <img id="object-image" class="image" src="" alt="Chemistry Object">
+        </div>
+        <input type="text" id="answer-input" placeholder="Enter the exact name here">
+        <button onclick="checkAnswer()">Submit</button>
+        <button id="hint-button" class="hint-button" onclick="giveHint()">Get Hint</button>
+        <div id="message" class="message"></div>
+        <div id="retry-container" class="retry-container">
+            <p>Try to write the answer correctly:</p>
+            <ul id="retry-list" class="retry-list">
+                <li class="retry-box"><input type="text" class="retry-input" placeholder="Answer"></li>
+                <li class="retry-box"><input type="text" class="retry-input" placeholder="Answer"></li>
+            </ul>
+            <div id="retry-message"></div>
+            <button onclick="validateRetries()">Submit Answers</button>
+        </div>
+    </div>
+    <div id="completion-container" class="button-container">
+        <button onclick="restartQuiz()">Retry</button>
+        <button onclick="endQuiz()">Cancel</button>
+    </div>
+</body>
+</html>
